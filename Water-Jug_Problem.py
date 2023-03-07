@@ -6,11 +6,24 @@
 def canMeasureWater(self, x: int, y: int, z: int) -> bool:   
   if x + y < z: return False
   visited, queue = set(), deque([(0, 0)])
+  childToParent = defaultdict(tuple)
+  
+  def printPath(finalState):
+    path = [finalState]
+    
+    interState = finalState
+    while childToParent[interState] != (0,0):
+        path.append(childToParent[interState])
+        interState = childToParent[interState]
+
+    print(path[::-1])
+            
   while queue:
       i, j = queue.popleft()
       visited.add((i, j))
       
       if i + j == z: 
+        printPath((i,j))
         return True
       
       moves = set([
@@ -18,7 +31,13 @@ def canMeasureWater(self, x: int, y: int, z: int) -> bool:
           (min(i + j, x), (i + j) - min(i + j, x)),   # pour y -> x
           ((i + j) - min(i + j, y), min(i + j, y)),   # pour x -> y
       ])
-      queue.extend(moves - visited)
+      
+      nonVisitedMoves = moves - visited
+      for state in nonVisitedMoves:
+          # make sure we don't override existing state's parent 'cause we will not travers it's child
+          if childToParent[state] == ():
+              childToParent[state] = (i,j)
+      queue.extend(nonVisitedMoves)
   return False
 
 # Math GCD solution
