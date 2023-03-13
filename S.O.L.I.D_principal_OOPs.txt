@@ -1,0 +1,17 @@
+S - Single Resposibility 
+  "A class should have only one reason to change"
+  
+O - Open-Close
+  "Open for extension Close for modification"
+  
+L - Liskov Substitution
+  "If Class B is subtype of Class A, then we should be able to replace object of A with B without breaking the behaviour of the program"
+   - Subclass shoud extend the capabilities of parent not narrow it down
+
+I - INterface Segmented
+  "Interface should be such, that client should not have to implement unnecessary functions they do not need"
+
+D - Dependency Inversion
+  "Class should depend on Inteface, rather than concrete class"
+  
+  More info: https://youtu.be/XI7zep97c-Y
