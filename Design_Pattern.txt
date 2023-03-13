@@ -1,0 +1,22 @@
+Stategy Design Pattern
+  Class should have "has-a" replation with functionality that is which is commons in some of it's child to reduce code redundancy.
+  ex. class "has-a" interface which can ne extended to implement different functionality. Vechical engine type
+  
+Observer Design Pattern
+  Example: Design "Notify me" functionality
+  Observable [(0,*) relationship with] Observer
+  
+  Observable Interface
+    - add(Observer)
+    - remove(Observer)
+    - modify(Observers)
+    - notify()
+    
+  Observer Interface
+    - update()
+    
+  
+ Decorator Design Pattern
+  Example: Design Pizza Makker machine, Design Coffe Machine
+    abstract class base{}
+    abstract class Extra extends Base{}
