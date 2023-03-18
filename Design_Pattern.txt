@@ -16,7 +16,22 @@ Observer Design Pattern
     - update()
     
   
- Decorator Design Pattern
+ Decorator Design Pattern (Structrural Design Pattern)
   Example: Design Pizza Makker machine, Design Coffe Machine
     abstract class base{}
     abstract class Extra extends Base{}
+
+Adaptor Design Patter
+  Example: XML to JSON data adaptor
+  Adaptor have 'has-a' relationship with existing interface.
+  
+Builder Design Pttern (Creation Design Pattern)
+
+Facade Design Pattern
+  Used whenever we want to hide system complexity/bussiness logic from the client.
+  Example:  OrderFacade::createOrder -> {Product::getProduct, Payment::makePayment, Invoice::generateInvoice, Notification::sentSMS}
+  
+Null Object Design Pattern
+  Handle NPE and reuce duplicacy of null check. ex: ogj != null
+  With adding Factory Pattern return NULLObject if no criateria mate instead of null.
+  NULLObject can nothing or Default behaviour when its triggered.
