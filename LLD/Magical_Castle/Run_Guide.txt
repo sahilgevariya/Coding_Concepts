@@ -1,0 +1,9 @@
+Notes: Make sure you have python installed in your Machine.
+
+Open Command Prompt and run below command,
+> python main.py
+
+ - Now it'll ask for next move direction player want to move.
+ - So write correct direction from printed list of possible direction from current room.
+
+At last when all the player will completes the game, the winner will be displayed.
