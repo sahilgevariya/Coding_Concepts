@@ -1,9 +1,14 @@
+#################################################################################################
+# Python built-in code : https://svn.python.org/projects/python/branches/pep-0384/Lib/bisect.py #
+#################################################################################################
 
 arr = [1,2,2,3,3,3,4,4,5]
 l,r = 0, len(arr)
 target = 3
 
-# bisect_left
+###############
+# bisect_left #
+###############
 def bisect_left(l,r, target):
   while l<r:
     mid = (l+r)//2
@@ -14,7 +19,9 @@ def bisect_left(l,r, target):
       
   return l
 
-# bisect_right
+################
+# bisect_right #
+################
 def bisect_right(l,r, target):
   while l<r:
     mid = (l+r)//2
